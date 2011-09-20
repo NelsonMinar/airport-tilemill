@@ -7,7 +7,7 @@
 <style type="text/css">
 body {
   margin: 0;
-  font-family: Helvetical, Arial, sans-serif; font-size: 12px;
+  font-family: Helvetica, Arial, sans-serif; font-size: 12px;
   overflow: hidden;
   background-color: #333;
 }
@@ -27,7 +27,16 @@ body {
   margin: 0 auto; width: 100%;
   font-size: 32px;
   color: white;
-  -webkit-text-stroke: 0.5px black;
+  -webkit-text-stroke: 0.5px #3a505e;
+}
+#credit {
+  position: fixed; top: 80px; left: 18px;
+  padding: 2px 3px 2px 2px;
+  background-color: #3a505e;
+}
+#credit a {
+  color: white;
+  text-decoration: none;
 }
 
 </style>
@@ -36,6 +45,7 @@ body {
 <body>
 <div id="disclaimer">not for navigation</div>
 <div id="map" style="width: 100%; height: 100%;"></div>
+<div id="credit"><a href="http://www.somebits.com/weblog/tech/good/tilemill.html">about</a></div>
 
 
 <script type="text/javascript">
