@@ -1,0 +1,12 @@
+CONFIG = {
+    'mode': 'wsgi',
+    'working_dir': '/var/www/airportmap/',
+    # 'python': '/usr/bin/python',
+    'args': (
+        '--bind=72.232.198.26:8000',
+	'--worker-class=gevent',
+        '--workers=2',
+        '--timeout=60',
+        'TileStache:WSGITileServer("/var/www/airportmap/tilestache.cfg")'
+    ),
+}
