@@ -20,12 +20,13 @@ Map {
 }
 
 #airports {
-  marker-line-width: 0.5;
-  [zoom <= 6] { marker-height: 1; marker-line-width: 0 }
-  [zoom = 7] { marker-height: 2; }
-  [zoom >= 8] { marker-height: 3; marker-line-width: 1 }
+  marker-line-color: #eee;
+  [zoom <= 5] { marker-height: 1.0; marker-line-width: 0.0; }
+  [zoom = 6]  { marker-height: 1.5; marker-line-width: 0.0; }
+  [zoom = 7]  { marker-height: 2.0; marker-line-width: 0.0; }
+  [zoom >= 8] { marker-height: 3.0; marker-line-width: 0.0; }
 
-  marker-fill: #d879ad;
+  marker-fill: #f1bcd9;
 }
 
 #bravo {
