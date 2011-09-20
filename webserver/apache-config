@@ -1,0 +1,4 @@
+ScriptAlias /airport /var/www/airportmap/map.cgi
+<Directory /var/www/airportmap/>
+    Options ExecCGI
+</Directory>

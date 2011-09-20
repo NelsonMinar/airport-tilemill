@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html><head>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
+<title>Maps</title>
+<script type="text/javascript" src="polymaps.min.js"></script>
+
+<style type="text/css">
+body {
+  margin: 0;
+  font-family: Helvetical, Arial, sans-serif; font-size: 12px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.compass .back { fill: #eee; fill-opacity: .9; }
+.compass .fore { stroke: #999; stroke-width: 1.5px; }
+.compass rect.back.fore { fill: #999; fill-opacity: .3; stroke: #eee; stroke-width: 1px; shape-rendering: crispEdges; }
+.compass .direction { fill: none; }
+.compass .chevron { fill: none; stroke: #999; stroke-width: 5px; }
+.compass .zoom .chevron { stroke-width: 4px; }
+.compass .active .chevron, .compass .chevron.active { stroke: #fff; }
+.compass.active .active .direction { fill: #999; }
+
+#disclaimer {
+  position: fixed; bottom: 20px;
+  text-align: center;
+  margin: 0 auto; width: 100%;
+  font-size: 32px;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+}
+
+</style>
+</head>
+
+<body>
+<div id="disclaimer">not for navigation</div>
+<div id="map" style="width: 100%; height: 100%;"></div>
+
+
+<script type="text/javascript">
+var mapLocationInUrl = location.hash != "";
+
+var po = org.polymaps;
+
+// Construct our map
+var map = po.map()
+    .container(document.getElementById("map").appendChild(po.svg("svg")))
+    .zoomRange([4,9])
+    .add(po.dblclick())
+    .add(po.drag())
+    .add(po.arrow())
+    .add(po.wheel().smooth(false))
+    .add(po.hash())
+    .add(po.touch().rotate(false));
+
+// Center the map on North America
+if (!mapLocationInUrl) {
+    map.center({lon: -95, lat: 36});
+    map.zoom(5);
+}
+
+// Add the map layer
+map.add(po.image().id("airports").url('http://www.somebits.com/airport/tiles/{Z}/{X}/{Y}.png'));
+
+map.add(po.compass().pan("none"));
+</script>
+</body></html>
+
