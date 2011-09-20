@@ -5,7 +5,7 @@ CONFIG = {
     'args': (
         '--bind=72.232.198.26:8000',
 	'--worker-class=gevent',
-        '--workers=2',
+        '--workers=3',
         '--timeout=60',
         'TileStache:WSGITileServer("/var/www/airportmap/tilestache.cfg")'
     ),
