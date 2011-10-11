@@ -6,8 +6,8 @@
     50
   ],
   "center": [
-    -117.96295166015432,
-    35.7375951517467,
+    -118.16070556640432,
+    35.603718740696195,
     7
   ],
   "format": "png8",
@@ -45,7 +45,7 @@
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "class": "",
       "Datasource": {
-        "table": "( SELECT * FROM airspaces\nWHERE (class = 'R' or class = 'P') and \"floor\" = 'SFC'\n) AS airspaces\n",
+        "table": "( SELECT * FROM sua\nWHERE (class = 'R' or class = 'P') and \"floor\" = 'SFC'\n) AS airspaces\n",
         "key_field": "",
         "geometry_field": "",
         "extent": "",
