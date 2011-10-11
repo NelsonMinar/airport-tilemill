@@ -77,8 +77,8 @@ Map {
 }
 
 #echo {
-  line-color: lighten(@landColor, 10%);
+  line-color: darken(@landColor, 15%);
   line-width: 1;
   polygon-fill: white;
-  polygon-opacity: 0.1;
+  polygon-opacity: 0.2;
 }
