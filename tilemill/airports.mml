@@ -6,9 +6,9 @@
     50
   ],
   "center": [
-    -111.28875732421801,
-    38.65977773071208,
-    6
+    -121.31103515624834,
+    38.11511075571636,
+    7
   ],
   "format": "png8",
   "interactivity": false,
@@ -37,6 +37,16 @@
       "class": "",
       "Datasource": {
         "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-1-states-provinces-lines.zip"
+      }
+    },
+    {
+      "geometry": "polygon",
+      "name": "echo",
+      "id": "echo",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/nelson/Documents/MapBox/data/class_e0.shp"
       }
     },
     {
@@ -73,14 +83,17 @@
     },
     {
       "geometry": "point",
-      "name": "airports",
-      "id": "airports",
-      "srs": "",
+      "name": "airportdb",
+      "id": "airportdb",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "class": "",
       "Datasource": {
-        "file": "/Users/nelson/Documents/MapBox/data/US Airports geocommons 145133.kml",
-        "id": "airports",
-        "project": "Florida"
+        "table": "airports_ops",
+        "key_field": "",
+        "geometry_field": "point",
+        "extent": "",
+        "type": "postgis",
+        "dbname": "faadata"
       }
     }
   ],

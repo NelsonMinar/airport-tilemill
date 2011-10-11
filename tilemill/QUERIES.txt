@@ -1,0 +1,13 @@
+drop view if exists airports_ops;
+
+create view airports_ops as
+select
+  location_identifier,
+  icao_identifier,
+  commercial_services_operations + commuter_services_operations + air_taxi_operations + ga_itinerant_operations + ga_local_operations + military_operations as ops, 
+  use_type,
+  point
+from airports_airport
+order by ops desc;
+
+select * from airports_ops;
