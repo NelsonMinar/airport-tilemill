@@ -6,8 +6,8 @@
     50
   ],
   "center": [
-    -118.82537841796709,
-    35.76434347966628,
+    -117.96295166015432,
+    35.7375951517467,
     7
   ],
   "format": "png8",
@@ -37,6 +37,20 @@
       "class": "",
       "Datasource": {
         "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-1-states-provinces-lines.zip"
+      }
+    },
+    {
+      "name": "sua",
+      "id": "sua",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "class": "",
+      "Datasource": {
+        "table": "( SELECT * FROM airspaces\nWHERE (class = 'R' or class = 'P') and \"floor\" = 'SFC'\n) AS airspaces\n",
+        "key_field": "",
+        "geometry_field": "",
+        "extent": "",
+        "type": "postgis",
+        "dbname": "faadata"
       }
     },
     {

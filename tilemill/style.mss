@@ -82,3 +82,19 @@ Map {
   polygon-fill: white;
   polygon-opacity: 0.2;
 }
+
+@suaColor: darken(@landColor, 15%);
+#sua {
+  line-color: #222;
+  line-width: 0;
+  //polygon-pattern-file:url('diagonal.jpg');
+  //polygon-pattern-alignment:global;
+  [class = 'R'] {
+    polygon-fill: @suaColor;
+    polygon-opacity: 1.0;
+  }
+  [class = 'P'] {
+    polygon-fill: @suaColor;
+    polygon-opacity: 1.0;
+  }
+}
