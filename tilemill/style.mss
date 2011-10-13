@@ -9,6 +9,21 @@ Map {
   background-color: #3a505e;
 }
 
+@contourColor: darken(@landColor, 10%);
+
+#contour8000::glow {
+  line-color: @contourColor;
+  line-width:3;
+  line-join:round;
+  line-opacity:0.4;
+}
+
+#contour8000 {
+  line-color: @contourColor;
+  line-join:round;
+  line-width: 1;
+}
+
 #countries {
   line-color: #bbb;
   line-width: 4;
