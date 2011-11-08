@@ -11,6 +11,7 @@ Map {
 
 @contourColor: darken(@landColor, 10%);
 
+/*
 #contour8000::glow {
   line-color: @contourColor;
   line-width:3;
@@ -23,6 +24,7 @@ Map {
   line-join:round;
   line-width: 1;
 }
+*/
 
 #countries {
   line-color: #bbb;
