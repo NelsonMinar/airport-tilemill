@@ -3,7 +3,7 @@ CONFIG = {
     'working_dir': '/var/www/airportmap/',
     # 'python': '/usr/bin/python',
     'args': (
-        '--bind=72.232.198.26:8000',
+        '--bind=208.110.64.210:8000',
 	'--worker-class=gevent',
         '--workers=3',
         '--timeout=60',
