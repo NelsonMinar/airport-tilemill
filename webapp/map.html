@@ -74,7 +74,7 @@ if (!mapLocationInUrl) {
 
 // Add the map layer
 // CGI url is http://www.somebits.com/airport/tiles/{Z}/{X}/{Y}.png
-map.add(po.image().id("airports").url('http://' + location.hostname + ':8000/tiles/{Z}/{X}/{Y}.png'));
+map.add(po.image().id("airports").url('../webserver/map.cgi/tiles/{Z}/{X}/{Y}.png'));
 
 map.add(po.compass().pan("none"));
 </script>
