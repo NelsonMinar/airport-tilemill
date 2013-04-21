@@ -8,4 +8,6 @@ airportmap-gunicorn: config to serve via WSGI and gunicorn. This is very fast.
 apache-config, map.cgi: config to serve via CGI. This is very slow.
 map.wsgi: attempt to serve via WSGI and Apache2. Not working.
 
-
+Another, simpler option is to use mbutil to simply extract all the images
+from the .mbtiles and serve them as static files via a stock webserver.
+https://github.com/mapbox/mbutil
